@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário do Aluno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="aluno.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="login.html">
+        <img src="imgs/logo.png" alt="Logo Instituto" class="logo-icon">
+      </a>
+      <nav>
+        <a href="professor.html">Área do Professor</a>
+        <a href="avisos.html">Avisos</a>
+      </nav>
+    </div>
+    <div class="header-center">
+      <img src="imgs/titulo.png" alt="Instituto Cultural Olhando Por Nós" class="instituto-image">
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="calendario.html">Calendário</a>
+        <a href="faleconosco.html">Fale Conosco</a>
+      </nav>
+    </div>
+    <div id="dataHora" class="data-hora"></div>
+  </header>
+
+  <div class="form-container">
+    <h2>Agenda do Aluno: <span id="nomeAluno"></span></h2>
+    <form>
+      <label for="agenda">Preencher Agenda:</label>
+      <textarea id="agenda" rows="4" cols="50" placeholder="Digite a agenda do aluno"></textarea>
+
+      <label for="solicitarAssinatura">Solicitar Assinatura?</label>
+      <select id="solicitarAssinatura">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label for="advertencia">Marcar Advertência?</label>
+      <select id="advertencia">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <button type="submit">Salvar</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('nomeAluno').textContent = localStorage.getItem('alunoSelecionado') || "João";
+  </script>
+</body>
+</html>
