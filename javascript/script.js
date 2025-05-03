@@ -51,6 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
     window.redirecionarParaFormulario = function(alunoNome) {
       localStorage.setItem('alunoSelecionado', alunoNome);
-      window.location.href = 'aluno.html';
+      window.location.href = 'html/aluno.html';
     };
   });
