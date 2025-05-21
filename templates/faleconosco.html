@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco - Instituto Cultural Olhando Por Nós</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/faleconosco.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+        <a href="{{ url_for('login') }}">
+            <img src="{{ url_for('static', filename='imgs/logo.png') }}" alt="Logo Instituto" class="logo-icon">
+        </a>
+          
+      <nav>
+        <a href="{{ url_for('professor') }}">Área do Professor</a>
+        <a href="{{ url_for('avisos') }}">Avisos</a>
+      </nav>
+    </div>
+    <div class="header-center">
+      <img src="{{ url_for('static', filename='imgs/titulo.png') }}" alt="Instituto Cultural Olhando Por Nós" class="instituto-image">
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="{{ url_for('calendario') }}">Calendário</a>
+        <a href="{{ url_for('faleconosco') }}" class="active">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <div class="login-box">
+      <h2>Fale Conosco</h2>
+      <form action="{{ url_for('faleconosco') }}" method="POST">
+        <input type="text" name="telefone" placeholder="Telefone" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

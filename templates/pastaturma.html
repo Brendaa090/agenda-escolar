@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Cultural Olhando Por Nós</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pastaturma.css') }}">
+</head>
+<body>
+  <header>
+    <h1>INSTITUTO CULTURAL OLHANDO POR NÓS</h1>
+    <nav>
+      <a href="{{ url_for('calendario') }}" class="nav-link" data-section="calendario">Calendário</a>
+      <a href="{{ url_for('faleconosco') }}" class="nav-link" data-section="fale-conosco">Fale Conosco</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="turmas-section">
+      <h2>Turmas</h2>
+      <div class="turmas-container">
+        <button class="turma-btn" data-turma="1">Turma 1</button>
+        <button class="turma-btn" data-turma="2">Turma 2</button>
+        <button class="turma-btn" data-turma="3">Turma 3</button>
+        <button class="turma-btn" data-turma="4">Turma 4</button>
+        <button class="turma-btn" data-turma="5">Turma 5</button>
+        <button class="turma-btn" data-turma="6">Turma 6</button>
+      </div>
+    </section>
+
+    <section id="dynamic-content">
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>

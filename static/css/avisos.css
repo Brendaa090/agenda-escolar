@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('../imgs/criancas.png') no-repeat center center fixed;
+  background-size: 100% auto; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; 
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  backdrop-filter: blur(5px);
+}
+
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+nav a {
+  margin-left: 10px; 
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 10px;
+}
+
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+
+.logo-icon {
+  width: 100px; 
+  height: auto; /
+
+}
+
+.data-hora {
+  margin-left: 10px; 
+  color: red;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 1em;
+  text-align: right;
+}
+
+.avisos {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  backdrop-filter: blur;
+}
+
+.aviso-coluna {
+  flex: 10;
+  margin: 0 10px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

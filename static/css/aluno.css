@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: url('../imgs/criancas.png') no-repeat center center fixed;
+    background-size: 100% auto; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; 
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    backdrop-filter: blur(5px);
+  }
+  
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+  }
+  
+  nav a {
+    margin-left: 10px; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 10px;
+  }
+  
+  
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  
+  .logo-icon {
+    width: 100px; 
+    height: auto; /
+  
+  }
+  
+  .data-hora {
+    margin-left: 10px; 
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 1em;
+    text-align: right;
+  }
+
+  .aluno {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+    margin: 10px;
+  }
+  
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover {
+    color: #000;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+.form-container {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 100px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.form-container h2 {
+  text-align: center;
+  color: #a70000;
+  margin-bottom: 20px;
+}
+
+
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  resize: none;
+}
+
+
+.form-container button {
+  background-color: #a70000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.form-container button:hover {
+  background-color: #880000;
+}

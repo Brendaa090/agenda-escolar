@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Instituto Cultural Olhando Por Nós</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <a href="{{ url_for('login') }}">
+        <img src="{{ url_for('static', filename='imgs/logo.png') }}" alt="Logo Instituto" class="logo-icon">
+      </a>
+      
+      <nav>
+        <a href="{{ url_for('professor') }}">Área do Professor</a>
+        <a href="{{ url_for('avisos') }}">Avisos</a>
+      </nav>
+    </div>
+    <div class="header-center">
+      <img src="{{ url_for('static', filename='imgs/titulo.png') }}" alt="Instituto Cultural Olhando Por Nós" class="instituto-image">
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="{{ url_for('calendario') }}">Calendário</a>
+        <a href="{{ url_for('faleconosco') }}">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <div class="login-box">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="flash-message">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <h2>Login</h2>
+      <form action="{{ url_for('login') }}" method="POST">
+        {{ csrf_token() }}
+        <input type="text" name="matricula" placeholder="Matrícula ou CPF" pattern="[0-9]+" minlength="11" maxlength="14" title="Digite apenas números" required>
+        <input type="password" name="senha" placeholder="Senha" minlength="6" required>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="first-time"><a href="{{ url_for('cadastro_pais') }}">Primeira entrada? Clique Aqui</a></p>
+    </div>
+  </main>
+
+</body>
+</html>

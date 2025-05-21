@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Instituto Cultural Olhando Por Nós</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cadprof.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+        <a href="{{ url_for('login') }}">
+            <img src="{{ url_for('static', filename='imgs/logo.png') }}" alt="Logo Instituto" class="logo-icon">
+        </a>
+          
+      <nav>
+        <a href="{{ url_for('professor') }}">Área do Professor</a>
+        <a href="{{ url_for('avisos') }}">Avisos</a>
+      </nav>
+    </div>
+    <div class="header-center">
+      <img src="{{ url_for('static', filename='imgs/titulo.png') }}" alt="Instituto Cultural Olhando Por Nós" class="instituto-image">
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="{{ url_for('calendario') }}">Calendário</a>
+        <a href="{{ url_for('faleconosco') }}">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <div class="login-box">
+      <h2>Cadastro de Professores</h2>
+      <form action="{{ url_for('cadastro_professor') }}" method="POST">
+        <input type="text" name="cpf" placeholder="CPF" required>
+        <input type="text" name="matricula" placeholder="Matrícula" required>
+        <input type="text" name="nome" placeholder="Nome Completo" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>
